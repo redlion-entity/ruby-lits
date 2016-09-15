@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS `redlion_db`;
+CREATE DATABASE `redlion_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `redlion_db`;
+
+
 # Table "errors"
 
 DROP TABLE IF EXISTS `errors`;
