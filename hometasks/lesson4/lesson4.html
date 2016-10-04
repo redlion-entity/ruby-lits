@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My profile page</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .header {
+            margin-bottom: 7px;
+        }
+
+        .header-wallpaper {
+            height: 205px;
+            background: #66A9CC linear-gradient(160deg, #66A9CC, #4B4A4D);
+        }
+
+        .user-name {
+            height: 40px;
+            line-height: 40px;
+            margin: 155px 0 0 180px;
+            font-family: helvetica, arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .header-panel {
+            height: 45px;
+            border: 1px solid #DDD;
+            border-top-width: 0;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+
+        .header-panel .avatar {
+            width: 160px;
+            height: 160px;
+            margin-top: -133px;
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
+            border-radius: 4px;
+        }
+
+        .contact-me-btn {
+            margin-top: 5px;
+        }
+
+        .about {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .about .panel-body li {
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .about .panel-body li:before {
+            padding-right: 10px;
+        }
+
+        .about .panel-body .work-place:before {
+            content: '\1F4BC';
+        }
+
+        .about .panel-body .education:before {
+            content: '\1F393';
+        }
+
+        .about .panel-body .location:before {
+            content: '\1F3E0';
+        }
+
+        @media (max-width: 480px) {
+            .user-name {
+                margin: 15px 0 0;
+                text-align: center;
+            }
+
+            .header-panel {
+                height: 130px;
+                text-align: center;
+            }
+
+            .contact-me-btn {
+                display: block;
+                width: 60%;
+                margin: 35px auto 0;
+                float: none !important;
+            }
+
+            .about {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header container">
+        <div class="row">
+            <div class="header-wallpaper container-fluid">
+                <div class="user-name">Макаров Олег</div>
+            </div>
+            <div class="header-panel container-fluid">
+                <img class="avatar" src="https://www.gravatar.com/avatar/0fe968651d9c486f23ad6da598a0c539?s=160" alt="Макаров Олег">
+                <button class="contact-me-btn btn btn-default col-md-2 col-sm-3 col-xs-4 pull-right" data-toggle="modal" data-target="#send_message_modal">Связаться со мной</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="about panel panel-default col-md-4 col-sm-5 col-xs-6">
+                <div class="panel-heading">
+	                <h3 class="panel-title">О себе</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-unstyled">
+                        <li class="work-place">Фронт-энд разработчик в Carusto</li>
+                        <li class="work-place">...</li>
+                        <li class="education">Компьютерная академия ”ШАГ”</li>
+                        <li class="education">ОНПУ, радиотехнический факультет</li>
+                        <li class="location">Украина, Одесса</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="send_message_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+                    <h4 class="modal-title">Отправить сообщение</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="send_message_form" action="mailto:test@test.test">
+                        <div class="form-group">
+                            <label for="form_field_name">Имя</label>
+                            <input type="text" class="form-control" id="form_field_name" placeholder="Уася Пупкин" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form_field_email">Email</label>
+                            <input type="email" class="form-control" id="form_field_email" placeholder="qwe@qwe.qwe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form_field_message">Сообщение</label>
+                            <textarea class="form-control" id="form_field_message" rows="3" placeholder="Наберите сообщение" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                    <button type="submit" form="send_message_form" class="btn btn-primary">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
