@@ -1,0 +1,91 @@
+.header {
+  margin-bottom: 7px;
+}
+
+.header-wallpaper {
+  height: 205px;
+  background: #66A9CC linear-gradient(160deg, #66A9CC, #4B4A4D);
+}
+
+.user-name {
+  height: 40px;
+  line-height: 40px;
+  margin: 155px 0 0 180px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+
+  @media (max-width: 480px) {
+    margin: 15px 0 0;
+    text-align: center;
+  }
+}
+
+.header-panel {
+  height: 45px;
+  border: 1px solid #DDD;
+  border-top-width: 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+  .avatar {
+    width: 160px;
+    height: 160px;
+    margin-top: -133px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 480px) {
+    height: 130px;
+    text-align: center;
+  }
+}
+
+.contact-me-btn {
+  margin-top: 5px;
+
+  @media (max-width: 480px) {
+    display: block;
+    width: 60%;
+    margin: 35px auto 0;
+    float: none !important;
+  }
+}
+
+.about {
+  padding-left: 0;
+  padding-right: 0;
+
+  .panel-body {
+
+    li {
+      height: 30px;
+      line-height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:before {
+        padding-right: 10px;
+
+        &.work-place {
+          content: '\1F4BC';
+        }
+
+        &.education {
+          content: '\1F393';
+        }
+
+        &.location {
+          content: '\1F3E0';
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}

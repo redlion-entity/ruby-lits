@@ -1,0 +1,74 @@
+<%= content_tag :div, class: ["header", "container"] do -%>
+    <%= content_tag :div, class: "row" do -%>
+        <%= content_tag :div, class: ['header-wallpaper', 'container-fluid'] do -%>
+            <%= content_tag(:div, 'Макаров Олег', class: 'user-name') %>
+        <% end -%>
+        <%= content_tag :div, class: ['header-panel', 'container-fluid'] do %>
+            <img class="avatar" src="https://www.gravatar.com/avatar/0fe968651d9c486f23ad6da598a0c539?s=160" alt="Макаров Олег">
+            <button class="contact-me-btn btn btn-default col-md-2 col-sm-3 col-xs-4 pull-right" data-toggle="modal" data-target="#send_message_modal">Связаться со мной</button>
+        <% end -%>
+    <% end -%>
+<% end -%>
+
+
+<!--<div class="header container">
+  <div class="row">
+    <div class="header-wallpaper container-fluid">
+      <div class="user-name">Макаров Олег</div>
+    </div>
+    <div class="header-panel container-fluid">
+      <img class="avatar" src="https://www.gravatar.com/avatar/0fe968651d9c486f23ad6da598a0c539?s=160" alt="Макаров Олег">
+      <button class="contact-me-btn btn btn-default col-md-2 col-sm-3 col-xs-4 pull-right" data-toggle="modal" data-target="#send_message_modal">Связаться со мной</button>
+    </div>
+  </div>
+</div>-->
+<div class="container">
+  <div class="row">
+    <div class="about panel panel-default col-md-4 col-sm-5 col-xs-6">
+      <div class="panel-heading">
+        <h3 class="panel-title">О себе</h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li class="work-place">Фронт-энд разработчик в Carusto</li>
+          <li class="work-place">...</li>
+          <li class="education">Компьютерная академия ”ШАГ”</li>
+          <li class="education">ОНПУ, радиотехнический факультет</li>
+          <li class="location">Украина, Одесса</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="send_message_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+        <h4 class="modal-title">Отправить сообщение</h4>
+      </div>
+      <div class="modal-body">
+        <form id="send_message_form" action="mailto:test@test.test">
+          <div class="form-group">
+            <label for="form_field_name">Имя</label>
+            <input type="text" class="form-control" id="form_field_name" placeholder="Уася Пупкин" required>
+          </div>
+          <div class="form-group">
+            <label for="form_field_email">Email</label>
+            <input type="email" class="form-control" id="form_field_email" placeholder="qwe@qwe.qwe" required>
+          </div>
+          <div class="form-group">
+            <label for="form_field_message">Сообщение</label>
+            <textarea class="form-control" id="form_field_message" rows="3" placeholder="Наберите сообщение" required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+        <button type="submit" form="send_message_form" class="btn btn-primary">Отправить</button>
+      </div>
+    </div>
+  </div>
+</div>
