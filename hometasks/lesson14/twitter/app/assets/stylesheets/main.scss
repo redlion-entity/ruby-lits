@@ -69,18 +69,18 @@
 
       &:before {
         padding-right: 10px;
+      }
 
-        &.work-place {
-          content: '\1F4BC';
-        }
+      &.work-place:before {
+        content: '\1F4BC';
+      }
 
-        &.education {
-          content: '\1F393';
-        }
+      &.education:before {
+        content: '\1F393';
+      }
 
-        &.location {
-          content: '\1F3E0';
-        }
+      &.location:before {
+        content: '\1F3E0';
       }
     }
   }
