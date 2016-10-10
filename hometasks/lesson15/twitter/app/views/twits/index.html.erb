@@ -1,0 +1,35 @@
+<%= render '/navigation' %>
+
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h3>Twits</h3>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Content</th>
+        <th>User</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @twits.each do |twit| %>
+        <tr>
+          <td><%= twit.content %></td>
+          <td><%= twit.user.nickname %></td>
+          <td>
+            <%= link_to 'Show', twit %> |
+            <%= link_to 'Edit', edit_twit_path(twit) %> |
+            <%= link_to 'Delete', twit, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Twit', new_twit_path %>
+</div>
