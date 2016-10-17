@@ -8,6 +8,7 @@ end
 
 class User < ActiveRecord::Base
   has_many :twits, dependent: :destroy
+  has_many :comments
   validates :nickname, presence: true, uniqueness: {case_sensitive: false}, length: {minimum: 5}
   validates :email, presence: true, uniqueness: true, email: true
 end

@@ -13,6 +13,16 @@
     <%= @twit.user.nickname %>
   </p>
 
+  <h2>Comments:</h2>
+  <% if @twit.comments.any? %>
+      <%= render @twit.comments %>
+  <% else %>
+      <p>No comments</p>
+  <% end %>
+
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
+
   <%= link_to 'Edit', edit_twit_path(@twit) %> |
   <%= link_to 'Back', twits_path %>
 </div>

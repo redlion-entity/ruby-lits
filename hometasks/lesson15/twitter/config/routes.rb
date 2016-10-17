@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :twits
+  resources :twits do
+    resources :comments
+  end
   resources :users
   get 'main/index'
 
