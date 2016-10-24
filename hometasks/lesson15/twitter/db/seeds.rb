@@ -6,9 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.all.each do |user|
-  user.destroy
-end
+User.delete_all
 
 100.times do
   nick_name = Faker::Internet.user_name
