@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.all.each do |user|
+  user.destroy
+end
+
+100.times do
+  nick_name = Faker::Internet.user_name
+
+  User.create(nickname: nick_name, email: Faker::Internet.email(name = nick_name), avatar: 'https://robohash.org/' + nick_name)
+end

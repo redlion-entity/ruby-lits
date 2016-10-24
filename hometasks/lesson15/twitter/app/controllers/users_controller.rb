@@ -69,6 +69,12 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:nickname, :email, :avatar)
+      parameters = params.require(:user).permit(:nickname, :email, :avatar)
+
+      if parameters['avatar'].empty?
+        parameters['avatar'] = 'https://robohash.org/' + parameters['nickname']
+      end
+
+      parameters
     end
 end

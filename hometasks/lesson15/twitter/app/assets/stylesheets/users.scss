@@ -1,3 +1,87 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.users-list-container {
+  padding-bottom: 40px;
+
+  .users-table {
+
+    td {
+      padding: 0 !important;
+      vertical-align: middle !important;
+    }
+
+    .table-cell-inner {
+      padding: 7px 10px;
+    }
+
+    .user-link {
+      display: inline-block;
+      color: #333;
+      font-weight: 500;
+      vertical-align: middle;
+      cursor: pointer;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: transparent;
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        float: left;
+        border: 1px solid #BBB;
+        border-radius: 18px;
+        background-color: white;
+      }
+
+      .nick-name-wrapper {
+        height: 36px;
+        line-height: 34px;
+        padding-left: 45px;
+
+        .nick-name {
+          display: inline-block;
+          max-width: 100%;
+          line-height: 15px;
+          vertical-align: middle;
+          border-bottom: 1px solid transparent;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &:hover {
+
+        .nick-name {
+          color: #1E7DEB;
+          border-bottom-color: #1E7DEB;
+        }
+      }
+    }
+
+    .action {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      opacity: 0.5;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+
+      &.edit {
+        background-image: url("/assets/actions/edit.png");
+      }
+
+      &.delete {
+        background-image: url("/assets/actions/delete.png");
+      }
+
+      &:hover {
+        opacity: 1;
+        border-color: #CCC;
+        background-color: #DDD;
+      }
+    }
+  }
+}
